@@ -1,12 +1,13 @@
 import React from 'react';
+import s from './Profile.module.css';
 
 const Profile = () => {
 return (
-    <div className='content'>
+    <div className={s.content}>
         <div>
             <img src=''/>
         </div>
-        <div>
+        <div className={s.item}>
             ava + description
         </div>
         <div>
