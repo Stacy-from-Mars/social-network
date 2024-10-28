@@ -11,8 +11,8 @@ return (
             <button>Add Post</button>
             <button>Remove</button>
         </div>
-        <Post/>
-        <Post/>
+        <Post message={"Hi, how are you?"} likes={15}/>
+        <Post message={"It's my first message."} likes={20}/>
     </div>
 )}
 
