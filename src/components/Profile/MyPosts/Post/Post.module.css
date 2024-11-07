@@ -1,6 +1,8 @@
 .item {
     background-color:rgba(123, 104, 238, .5);
-    grid-gap: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .item img {
