@@ -1,0 +1,9 @@
+.descriptionBlock {
+    padding: 10px;
+}
+
+.content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
