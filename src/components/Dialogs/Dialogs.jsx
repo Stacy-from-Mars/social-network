@@ -26,7 +26,13 @@ const Dialogs = () => {
         {id: 3, name: "Eliza"},
         {id: 4, name: "Bella"},
         {id: 5, name: "Robin"}
-    ]
+    ];
+
+    let messagesData = [
+        {message:"Hello!"},
+        {message:"How are you?"},
+        {message:"You`re done great!"}
+    ];
 
     return (
         <div className={s.dialogs}>
@@ -38,9 +44,9 @@ const Dialogs = () => {
                 <DialogItems id={dialogsData[4].id} name={dialogsData[4].name}/>
             </div>
             <div className={s.messages}>
-                <Message message="Hello!"/>
-                <Message message="How are you?"/>
-                <Message message="You`re done great!"/>
+                <Message message={messagesData[0].message}/>
+                <Message message={messagesData[1].message}/>
+                <Message message={messagesData[2].message}/>
             </div>
         </div>
     )
