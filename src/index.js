@@ -18,10 +18,15 @@ let messages = [
     {message: "You`re done great!"},
 ];
 
+let posts = [
+    {message: "Hi, how are you?", likes: 15},
+    {message: "It's my first message.", likes: 20}
+];
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App dialogs={dialogs} messages={messages}/>
+        <App posts={posts} dialogs={dialogs} messages={messages}/>
     </React.StrictMode>
 );
 
