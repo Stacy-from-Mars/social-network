@@ -4,14 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let dialogs = [
+    {id: 1, name: "Lola"},
+    {id: 2, name: "Demi"},
+    {id: 3, name: "Eliza"},
+    {id: 4, name: "Bella"},
+    {id: 5, name: "Robin"}
+];
+
+let messages = [
+    {message: "Hello!"},
+    {message: "How are you?"},
+    {message: "You`re done great!"},
+];
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App/>
+        <App dialogs={dialogs} messages={messages}/>
     </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
