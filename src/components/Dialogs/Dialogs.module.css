@@ -1,7 +1,7 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 4fr;
-
+    padding: 20px;
 }
 
 .dialogs a {
@@ -13,10 +13,19 @@
     color: gold;
 }
 
+.dialogs img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
 .messages {
 
 }
 
 .message {
-
+    background-color:rgba(123, 104, 238, .5);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
 }
