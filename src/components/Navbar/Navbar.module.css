@@ -1,7 +1,8 @@
 .navigation {
     grid-area: n;
-    background-color: cadetblue;
     padding: 20px;
+    background-image: url("https://preview.redd.it/if-anyone-likes-space-or-galaxy-theme-photos-i-have-a-bunch-v0-57b60aaqxdhc1.jpg?width=640&crop=smart&auto=webp&s=428e0eed25d44cb3d18ff03bb15b5841b7dc161f");
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.25);
 }
 
 .item a {
@@ -10,5 +11,27 @@
 }
 
 .item a:focus {
+    color: gold;
+}
+
+.friends img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: solid 2px gold;
+}
+
+.friends {
+    display: flex;
+    column-gap: 5px;
+}
+
+.friends div {
+    text-align: center;
+    margin: 0 auto;
+    color: gold;
+}
+
+.item h3 {
     color: gold;
 }
