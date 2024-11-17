@@ -39,4 +39,11 @@ export let addPost = (postMessage) => {
     state.profilePage.posts.push(newPost);
 }
 
+export let sendMessage = (message) => {
+    let newMessage = {
+        message: message
+    }
+    state.dialogsPage.messages.push(newMessage);
+}
+
 export default state;
