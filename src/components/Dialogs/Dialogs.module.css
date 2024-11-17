@@ -19,8 +19,25 @@
     border-radius: 20px;
 }
 
-.messages {
+.userText {
+    display: flex;
+}
 
+.userText button {
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgb(123, 104, 238);
+    font-weight: bold;
+    margin-left: 10px;
+    width: 20%;
+}
+
+.userText textarea {
+    background-color: rgba(123, 104, 238, .8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    resize: none;
 }
 
 .message {
@@ -28,4 +45,5 @@
     margin-bottom: 10px;
     border-radius: 10px;
     padding: 10px;
+    overflow-wrap: anywhere;
 }
