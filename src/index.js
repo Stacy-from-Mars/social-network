@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import state, {addPost, sendMessage, updateNewMessageText, updateNewPostText} from "./redux/state";
+import state, {addPost, sendMessage, subscribe, updateNewMessageText, updateNewPostText} from "./redux/state";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
@@ -16,5 +16,7 @@ export let rerenderEntireTree = (state) => {
 }
 
 rerenderEntireTree(state);
+
+subscribe(rerenderEntireTree);
 
 reportWebVitals();
