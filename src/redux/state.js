@@ -21,6 +21,7 @@ let state = {
             {message: "How are you?"},
             {message: "You`re done great!"},
         ],
+        newMessageText: "new message text"
     },
     sidebar: {
         friends: [
@@ -51,11 +52,17 @@ export let updateNewPostText = (newText) => {
     renderEntireTree(state);
 }
 
-export let sendMessage = (message) => {
+export let sendMessage = () => {
     let newMessage = {
-        message: message
+        message: state.dialogsPage.newMessageText
     }
     state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = "";
+    renderEntireTree(state);
+}
+
+export let updateNewMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
     renderEntireTree(state);
 }
 
