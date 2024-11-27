@@ -73,6 +73,11 @@ let store = {
     }
 }
 
+export const addPostActionCreator = () => ({type: ADD_POST});
+export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
+export const sendMessageActionCreator = () => ({type: SEND_MESSAGE});
+
 window.store = store;
 
 export default store;
