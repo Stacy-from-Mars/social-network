@@ -1,3 +1,7 @@
+import Friends from "../components/Navbar/Friends/Friends";
+
+const REFRESH_FRIENDS = "REFRESH-FRIENDS";
+
 let initialState = {
     friends: [
         {id: 1, name: "Lola", image: "https://masterpiecer-images.s3.yandex.net/0b6429fb5de911ee814f963c1ee369ba:upscaled"},
@@ -8,8 +12,36 @@ let initialState = {
     ]
 }
 
-const sidebarReducer = (state = initialState, action) => {
+let fillRandomFriends = (friendsList) => {
+    let randomArr = [];
+    let generateRandomUserId = function () {
+        return Math.floor(Math.random() * friendsList.length) + 1;
+    };
 
+    let randomFunc = () => {
+        for (let i = 0; i <= 2; i++) {
+            let userId;
+            while (!userId || randomArr.find(f => f.id === userId)) {
+                userId = generateRandomUserId();
+            }
+            randomArr.push(friendsList.find(f => f.id === userId));
+        }
+    }
+    randomFunc();
+    return randomArr;
 }
+
+const sidebarReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case REFRESH_FRIENDS:
+            let randomFriends = fillRandomFriends(state.friends);
+            state.newFriendsArray = randomFriends.map(f => <Friends image={f.image} name={f.name}/>);
+            return state
+        default:
+            return state
+    }
+}
+
+export const refreshFriendsCreator = () => ({type: REFRESH_FRIENDS})
 
 export default sidebarReducer;

@@ -9,7 +9,7 @@ const App = (props) => {
     return (
         <div className='app-wrapper'>
             <Header/>
-            <Navbar state={props.state.sidebar}/>
+            <Navbar sidebar={props.state.sidebar} dispatch={props.dispatch}/>
             <div className='app-wrapper-content'>
                 <Routes>
                     <Route path='/profile'
