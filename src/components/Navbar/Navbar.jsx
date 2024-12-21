@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
 
 const Navbar = (props) => {
             return (
@@ -24,7 +25,7 @@ const Navbar = (props) => {
                         <h3>Friends online</h3>
                     </div>
                     <div className={s.friends}>
-                        {props.sidebar.newFriendsArray}
+                        {props.sidebar.newFriendsArray.map(f => <Friends image={f.image} name={f.name}/>)}
                     </div>
                     <button onClick={props.refreshFriends}>Refresh</button>
                 </nav>
