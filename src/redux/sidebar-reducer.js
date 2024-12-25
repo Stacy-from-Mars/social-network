@@ -33,15 +33,14 @@ let fillRandomFriends = (friendsList) => {
 const sidebarReducer = (state = initialState, action) => {
     switch (action.type) {
         case REFRESH_FRIENDS:
-            let stateCopy = {...state};
-            stateCopy.friends = [...state.friends]
-            let randomFriends = fillRandomFriends(stateCopy.friends);
-            stateCopy.newFriendsArray = randomFriends;
+            let stateCopy = {
+                ...state,
+                friends: [...state.friends]
+            };
+            stateCopy.newFriendsArray = fillRandomFriends(stateCopy.friends);
             return stateCopy;
-        default: {
-            let stateCopy = {...state};
-            return stateCopy;
-        }
+        default:
+            return state;
     }
 }
 
