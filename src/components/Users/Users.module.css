@@ -1,0 +1,73 @@
+.users {
+    display: grid;
+    padding: 20px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-bottom: 10px;
+}
+
+.users a {
+    color: white;
+    text-decoration: none;
+}
+
+.dialog a:focus {
+    color: gold;
+}
+
+.users img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.user button {
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgb(123, 104, 238);
+    font-weight: bold;
+    margin-top: 5px;
+    width: 100px;
+}
+
+.userText textarea {
+    background-color: rgba(123, 104, 238, .8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    resize: none;
+}
+
+.userContent {
+    background-color:rgba(123, 104, 238, .5);
+    border-radius: 10px;
+    padding: 10px;
+    overflow-wrap: anywhere;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+}
+
+.userQuote {
+    display: flex;
+    flex: auto;
+    height: 50%;
+    align-items: end;
+}
+
+.userInfo span:first-of-type{
+    font-weight: bold;
+}
+
+.userImage {
+    display: flex;
+    flex-flow: column;
+}
+
+
